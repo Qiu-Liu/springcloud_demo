@@ -1,0 +1,20 @@
+#路由网关端口号，所有的微服务都访问路由网关的端口
+server:
+  port: 20000
+spring:
+  application:
+    name: gateway
+    #根据路径对应每个微服务
+  cloud:
+    gateway:
+      routes:
+        #后台
+        - id: sso
+          uri: lb://web-sso
+          predicates:
+            - Path=/sso/**
+        #前台
+        - id: front
+          uri: lb://web-front
+          predicates:
+            - Path=/**
