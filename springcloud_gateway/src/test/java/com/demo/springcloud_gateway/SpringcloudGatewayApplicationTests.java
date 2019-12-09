@@ -2,10 +2,10 @@ package com.demo.springcloud_gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootTest
-@EnableEurekaClient
+@EnableDiscoveryClient
 class SpringcloudGatewayApplicationTests {
 
     @Test

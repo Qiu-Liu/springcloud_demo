@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
+
+management:
+  health:
+    consul:
+      enabled: false

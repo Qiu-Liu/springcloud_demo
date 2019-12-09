@@ -6,15 +6,19 @@ spring:
     name: gateway
     #根据路径对应每个微服务
   cloud:
+    consul:
+      discovery:
+        service-name: gateway
     gateway:
       routes:
-        #后台
-        - id: sso
-          uri: lb://web-sso
+        #user
+        - id: user
+          uri: lb://web-user
           predicates:
             - Path=/sso/**
-        #前台
-        - id: front
-          uri: lb://web-front
+
+        #admin
+        - id: admin
+          uri: lb://web-admin
           predicates:
             - Path=/**
