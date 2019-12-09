@@ -24,4 +24,11 @@ public class UserServiceImpl  implements IUserService {
     public void deleteUserById(Integer id) {
         userMapper.deleteUserById(id);
     }
+
+    @Override
+    public int updateUserAge(Integer id) {
+        return userMapper.updateUserAge(id);
+    }
+
+
 }

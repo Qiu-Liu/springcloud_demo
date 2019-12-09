@@ -1,0 +1,5 @@
+spring:
+  redis:
+    #不填会启用默认端口
+    host: 106.54.218.78
+    password: myredis

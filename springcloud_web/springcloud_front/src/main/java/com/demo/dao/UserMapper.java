@@ -10,4 +10,7 @@ import com.demo.entity.User;
 public interface UserMapper extends BaseMapper<User> {
 
     void deleteUserById(Integer id);
+
+
+    int updateUserAge(Integer id);
 }

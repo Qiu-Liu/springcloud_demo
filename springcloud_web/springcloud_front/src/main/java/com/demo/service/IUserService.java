@@ -11,4 +11,7 @@ public interface IUserService {
     User getUser(Integer id);
 
     void deleteUserById(Integer id);
+
+
+    int updateUserAge(Integer id);
 }
